@@ -13,7 +13,7 @@ export default function StorySameAuthor({post}){
     useEffect(() => {
         const fetchAuthorPost = async () => {
           try {
-            const res = await fetch(`/api/post/getposts?author=${post?.author}`);
+            const res = await fetch(`https://story-sever.vercel.app/api/post/getposts?author=${post?.author}`);
             const data = await res.json();
             if (!res.ok) {
          

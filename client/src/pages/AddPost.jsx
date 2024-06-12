@@ -44,7 +44,7 @@ export default function AddPost() {
     const a = data.shift();
     const newForm = {slug : formData?.slug, content: a.content, title: a.titleChapter, chaptersNumber: 1976 - data.length}
     try {
-      const res = await fetch('/api/chapters/create', {
+      const res = await fetch('https://story-sever.vercel.app/api/chapters/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

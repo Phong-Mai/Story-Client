@@ -18,7 +18,7 @@ export default function Category() {
     useEffect(() => {
        
         const fetchPosts = async () => {
-          const res = await fetch(`/api/post/getcategory?category=${category}`);
+          const res = await fetch(`https://story-sever.vercel.app/api/post/getcategory?category=${category}`);
           const data = await res.json();
           setPosts(data.posts);
         };

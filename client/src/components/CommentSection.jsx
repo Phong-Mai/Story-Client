@@ -19,7 +19,7 @@ export default function CommentSection({ postId }) {
       return;
     }
     try {
-      const res = await fetch('/api/comment/create', {
+      const res = await fetch('https://story-sever.vercel.app/api/comment/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -41,7 +41,7 @@ export default function Chapter() {
     const fetchPost = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/chapters/getchapter?slug=${postSlug}&&chaptersNumber=${parseInt(num)}`);
+        const res = await fetch(`https://story-sever.vercel.app/api/chapters/getchapter?slug=${postSlug}&&chaptersNumber=${parseInt(num)}`);
         const data = await res.json();
         if (!res.ok) {
           setError(true);
@@ -63,7 +63,7 @@ export default function Chapter() {
   useEffect(() => {
    const fetchTitleChapter = async () => {
       try {
-        const res = await fetch(`/api/chapters/gettitlechapter?slug=${postSlug}`);
+        const res = await fetch(`https://story-sever.vercel.app/api/chapters/gettitlechapter?slug=${postSlug}`);
         const data = await res.json();
         if (res.ok) {
           setTitleChapter(data.posts);
