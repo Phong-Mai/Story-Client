@@ -59,7 +59,7 @@ useEffect(() => {
   const fetchtitlechapter = async () => {
     try {
       // setLoading(true);
-      const res = await fetch(`/api/chapters/gettitlechapter?slug=${postSlug}`);
+      const res = await fetch(`https://story-sever.vercel.app/api/chapters/gettitlechapter?slug=${postSlug}`);
       const data = await res.json();
       if (!res.ok) {
         // setError(true);
