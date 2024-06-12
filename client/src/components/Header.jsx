@@ -33,7 +33,7 @@ export default function Header() {
 
   const handleSignout = async () => {
     try {
-      const res = await fetch('/api/user/signout', {
+      const res = await fetch('https://story-sever.vercel.app/api/user/signout', {
         method: 'POST',
       });
       const data = await res.json();
