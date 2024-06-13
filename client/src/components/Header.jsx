@@ -63,9 +63,9 @@ export default function Header() {
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
         <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-          Phong
+          Truyện Chữ
         </span>
-        Blog
+        {/* Hay */}
       </Link>
       <select onChange={(e) =>handleChange(e)} id="countries" className="hidden lg:block md:block md:w-[110px] lg:w-[200px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     <option defaultValue='Thể loại'>Thể loại</option>

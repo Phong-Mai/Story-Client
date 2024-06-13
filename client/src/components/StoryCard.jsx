@@ -6,7 +6,7 @@ export default function StoryCard({ post }) {
   
 
   return (
-    <div className='group relative border border-teal-500 hover:border-2 h-[250px] overflow-hidden rounded-lg  transition-all'>
+    <div className='group relative border border-teal-500 hover:border-2 h-[250px] overflow-hidden rounded-lg  transition-all '>
       <Link to={`/${a}`}>
         <img
           loading='lazy'
@@ -17,6 +17,7 @@ export default function StoryCard({ post }) {
       </Link>
       <div className=' absolute bottom-2 p-3 flex flex-col gap-2'>
         <p className='text-sm font-semibold text-slate-100 line-clamp-2'>{post?.title}</p>
+       
         {/* <span className='italic text-sm'>{post.category}</span> */}
         {/* <Link
           to={`/${post.slug}`}
@@ -26,5 +27,6 @@ export default function StoryCard({ post }) {
         </Link> */}
       </div>
     </div>
+    
   );
 }

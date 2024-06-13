@@ -20,13 +20,13 @@ export default function FooterCom() {
               className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
             >
               <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-                Phong
+                Truyện Chữ
               </span>
-              Blog
+              {/* Blog */}
             </Link>
           </div>
           <div className='hidden lg:block w-[500px] mt-5'>
-          <p>[Tên trang web của bạn] là thiên đường dành cho những tín đồ yêu thích truyện chữ! Tại đây, bạn có thể đắm chìm trong kho tàng truyện khổng lồ thuộc mọi thể loại, từ những câu chuyện tình yêu lãng mạn, những cuộc phiêu lưu kỳ thú đến những trận chiến gay cấn, tất cả đều được tuyển chọn kỹ lưỡng và cập nhật liên tục.</p>
+          <p>Truyện chữ là thiên đường dành cho những tín đồ yêu thích truyện chữ! Tại đây, bạn có thể đắm chìm trong kho tàng truyện khổng lồ thuộc mọi thể loại, từ những câu chuyện tình yêu lãng mạn, những cuộc phiêu lưu kỳ thú đến những trận chiến gay cấn, tất cả đều được tuyển chọn kỹ lưỡng và cập nhật liên tục.</p>
           </div>
           <div className='grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6'>
             <div>
@@ -44,7 +44,7 @@ export default function FooterCom() {
             
                   rel='noopener noreferrer'
                 >
-                  phong Blog
+                  truyện chữ
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -72,7 +72,7 @@ export default function FooterCom() {
         <div className='w-full sm:flex sm:items-center sm:justify-between'>
           <Footer.Copyright
             href='#'
-            by="Phong blog"
+            by="phongmhp@gmail.com"
             year={new Date().getFullYear()}
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">

@@ -54,6 +54,7 @@ export default function Home() {
       </div>
       <NewStoryUpdate posts={posts ?? posts}/>
       <StoryCompleted posts={posts} />
+   
     </div>
   );
 }
