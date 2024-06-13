@@ -4,7 +4,6 @@ import StoryCompletedCard from "./StoryCompletedCard";
 export default function StoryCompleted({posts}) {
 
     const storyStatusFull = posts?.filter((e) => e.status == 'full')
-    console.log(storyStatusFull);
     return (
         <div className=' mx-auto p-3 flex flex-col gap-8 py-7'>
     {storyStatusFull && storyStatusFull.length > 0 && (

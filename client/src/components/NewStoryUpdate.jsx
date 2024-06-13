@@ -2,7 +2,6 @@ import moment from 'moment';
 import '../../src/locale/vi'
 import { Link } from "react-router-dom";
 export default function NewStoryUpdate ({posts}){
-  console.log(posts);
     return (
         <div className=' mx-auto p-3 flex flex-col gap-8 py-7'>
           <h1 className=" font-bold text-xl">Truyện mới cập nhật</h1>
