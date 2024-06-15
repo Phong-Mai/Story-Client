@@ -13,6 +13,7 @@ export default defineConfig({
     proxy: {
       '/api': 'https://story-sever.vercel.app',
     },
+    secure : true,
   },  
  
   plugins: [react()],
