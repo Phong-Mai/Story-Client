@@ -2,21 +2,46 @@ import { Link } from 'react-router-dom';
 // import CallToAction from '../components/CallToAction';
 import { useEffect, useState } from 'react';
 // import PostCard from '../components/PostCard';
+import { Spinner } from 'flowbite-react';
+
 import StoryCard from '../components/StoryCard';
 import NewStoryUpdate from '../components/NewStoryUpdate';
 import StoryCompleted from '../components/StoryCompleted';
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
   // console.log(process.env.SEVER);
+  const a = JSON.parse(localStorage.getItem('persist:root'))
+  const b = JSON.parse(a.user)
+  console.log(b.currentUser);
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch(`https://story-sever.vercel.app/api/post/getPosts`);
-      const data = await res.json();
-      setPosts(data.posts);
+      try {
+        setLoading(true);
+        const res = await fetch(`https://story-sever.vercel.app/api/post/getPosts`);
+        const data = await res.json();
+        if (!res.ok) {
+          setLoading(false);
+          return;
+        }
+        if (res.ok) {
+          setPosts(data.posts);
+          setLoading(false);
+        }
+      } catch (error) {
+        setError(true);
+        setLoading(false);
+      }
     };
     fetchPosts();
   }, []);
+  if (loading)
+  return (
+    <div className='flex justify-center items-center min-h-screen'>
+      <Spinner size='xl' />
+    </div>
+  );
   return (
     <div className='md:w-[80%] sm:w-full mx-auto'>
       {/* <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
